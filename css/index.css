@@ -1,0 +1,299 @@
+  /* APP-WIDE */
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  background-color: #0a0e10;
+  color: #e2e2e2;
+  word-wrap: break-word;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+form {
+  position: relative;
+}
+
+input[type="text"] {
+  width: 100%;
+  color: #538396;
+}
+
+.delete {
+  position: absolute;
+  font-size: 54px;
+  font-weight: 900;
+  top: -13px;
+  right: 12px;
+  text-decoration: none;
+}
+
+.submit {
+  position: absolute;
+  font-size: 54px;
+  font-weight: 900;
+  top: -13px;
+  right: 12px;
+  text-decoration: none;
+  color: #1d2d34;
+}
+
+.submit:hover {
+  color: #2f4955;
+}
+
+::placeholder {
+  color: #385865;
+}
+
+.hidden {
+  display: none;
+}
+
+  /* HEADER */
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 20px;
+  background-color: #141F24;
+}
+
+.reset {
+  position: absolute;
+  right: 8px;
+  padding: 0px 12px 3px;
+  border-radius: 4px;
+  background-color: #b71616;
+  transition: background-color 0.17s ease;
+}
+
+.reset:hover {
+  background-color: black;
+}
+
+  /* TODO LISTS */
+
+.todo-lists {
+  width: 50%;
+  padding: 20px 0;
+}
+
+.todo-list {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #141F24;
+  border-radius: 8px;
+}
+
+.todo-list:last-of-type {
+  margin-bottom: 0;
+}
+
+.todo-list > h1 {
+  margin-bottom: 20px;
+}
+
+.todo-list-item {
+  position: relative;
+}
+
+.todo-list-item > .delete:hover {
+  color: #d89f67;
+}
+
+.todo-list-item > .delete {
+  color: #c07832;
+}
+
+.todo-list-form {
+  padding: 10px 20px;
+}
+
+input[type="text"].todo-list-form-title  {
+  margin-bottom: 10px;
+  width: calc(100% - 54px);
+}
+
+.todo-item-btn {
+  background-color: peru;
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  transition: background-color 0.15s ease;
+}
+
+.todo-item-btn:hover {
+  background-color: #1a2c33;
+}
+
+.todo-body {
+  background-color: #1a2c33;
+  padding: 15px 20px 15px;
+  margin-top: -16px;
+  border-radius: 0px 0px 8px 8px;
+  font-size: 16px;
+  color: #345866;
+}
+
+.reveal-body {
+  border-radius: 8px 8px 0px 0px;
+}
+
+.reveal-no-body {
+  margin-bottom: 5px;
+}
+
+  /* STEP LISTS */
+
+.step-list {
+  color: peru;
+}
+
+.step-list-item {
+  position: relative;
+  width: 100%;
+  padding-left: 54px;
+  min-height: 54px;
+}
+
+.step-list-item:hover > button > .step-list-item-title {
+  color: #eae2da;
+}
+
+.step-list-item:hover > button > .step-list-item-body {
+  color: #2f4955;
+}
+
+/* .step-list-item:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: calc(0px + -55%);
+  left: 24px;
+  background-color: #283b44;
+}
+
+.step-list-item:first-of-type:before {
+  height: 15px;
+  top: 0px;
+} */
+
+.step-list-item > .delete {
+  color: #1d2d34;
+}
+
+.step-list-item > .delete:hover {
+  color: #2f4955;
+}
+
+.step-list-item.done {
+  text-decoration: line-through;
+  color: #20323a;
+}
+
+.step-list-item.done:hover > button > .step-list-item-title {
+  color: #2f4955;
+}
+
+.step-list-item.done > .step-list-item-btn:after {
+  background-color: peru;
+  border: 1px solid peru;
+}
+
+.step-list-item-btn {
+  width: 100%;
+}
+
+.step-list-item-btn:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  top: 15px;
+  left: 12px;
+  background-color: #141F24;
+  transition: background-color 0.15s ease;
+  border: 1px solid #283b44;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.step-list-item-title {
+  align-items: center;
+  min-height: 53px;
+  padding: 10px 0px;
+}
+
+.step-list-item-body {
+  font-size: 16px;
+  color: #20323a;
+  margin-top: -10px;
+}
+
+.step-list-form {
+  padding-left: 54px;
+  margin-bottom: 24px;
+}
+
+.step-list-form:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  top: 15px;
+  left: 12px;
+  border: 1px dashed #283b44;
+  border-radius: 50%;
+}
+
+input[type="text"].step-list-form-title {
+  display: flex;
+  align-items: center;
+  min-height: 54px;
+  width: calc(100% - 54px);
+}
+
+input[type="text"].step-list-form-body {
+  width: calc(100% - 20px);
+}
+
+  /* MULTI */
+
+.todo-item-btn,
+[class$="item-title"],
+[class$="item-body"] {
+  padding-right: 54px;
+}
+
+input[type="text"].step-list-form-body,
+input[type="text"].todo-list-form-body {
+  background-color: #1a2c33;
+  padding: 8px 10px;
+  font-size: 16px;
+  border-radius: 8px;
+}
